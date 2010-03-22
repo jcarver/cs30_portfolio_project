@@ -1,0 +1,109 @@
+// ---------------------------------------
+// BASE STYLES
+// ---------------------------------------
+
+.button
+    :display inline-block
+    :padding 0
+    :color #fff
+    :text-decoration none
+    :font-weight bold
+    +border-radius( 20px )
+    +box-shadow( 0px, 1px, 3px, rgba(0,0,0,.4) )
+    :text-shadow rgba(0,0,0,.6) 0px -1px 1px
+    :border rgba(0,0,0,.2) solid 1px
+    :cursor pointer
+    :outline none
+    :font-family Arial, sans-serif
+    :letter-spacing 0
+    :overflow hidden
+
+    span
+        :padding      5px 18px 6px 18px
+        :display      block
+        :color #fff
+        :border-top   1px solid rgba(255,255,255,0.3)
+        :border-left  1px solid rgba(255,255,255,0.15)
+        :border-right 1px solid rgba(255,255,255,0.15)
+        +border-radius(20px)
+        +imageless-button-highlight-shadow( rgba(255,255,255,.1), rgba(0,0,0,.20) )
+
+
+    &:active
+        span
+            :border rgba(0,0,0,.25) 1px solid
+            :border-bottom none
+            +inset-box-shadow(0, 5px, 10px, rgba(0,0,0,.4) )
+            :background-image   -webkit-gradient(linear, 0% 0%, 0% 100%, from( rgba(0,0,0,.4)   ), to( rgba(0,0,0,.1)  ))
+
+
+.button:hover
+    :color #fff
+
+.button.inactive
+    :cursor default
+
+
+// ---------------------------------------
+// SIZES
+// ---------------------------------------
+
+.mega.button
+    :font-size    30px
+    :margin-top   20px
+    :margin-right 30px
+    +border-radius(30px)
+
+    span
+        +border-radius(30px)
+
+.large.button
+    :font-size    20px
+    :margin-top   20px
+    :margin-right 20px
+
+.small.button
+    :font-size 14px
+    span
+        :padding 3px 12px 4px 12px
+
+
+.micro.button
+    :font-size 12px
+    span
+        :padding 3px 10px 4px 10px
+
+
+// ---------------------------------------
+// COLORS
+// ---------------------------------------
+
+.blue.button
+    +button-color(!blue)
+
+.green.button
+    +button-color(!green)
+
+.orange.button
+    +button-color(!orange)
+
+
+.red.button
+    +button-color(!red)
+
+.dark-gray.button
+    +button-color(!dark_gray)
+
+.medium-gray.button
+    :background-color #454545
+    &:hover
+        +lighten(#454545)
+    &:active
+        :background-color = #454545
+
+
+.light-gray.button
+    :background-color = !gray
+    :text-shadow none
+    :color #9a9a9a
+

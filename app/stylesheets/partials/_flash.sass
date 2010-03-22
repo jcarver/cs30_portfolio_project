@@ -1,0 +1,31 @@
+// ----------------------
+// FlASH NOTICES
+// ----------------------
+
+#flash
+    :margin -20px 0 20px 0
+
+.flash-item
+    :margin 0 auto
+    :text-align center
+    :padding 12px
+    :font-size 20px
+    :font-weight bold
+    :max-width 500px
+    :text-shadow 0px -1px 2px rgba(0,0,0,.4)
+    :border-top   1px solid rgba(255,255,255,0.3)
+    :border-left  1px solid rgba(255,255,255,0.15)
+    :border-right 1px solid rgba(255,255,255,0.15)
+    +border-radius( 20px )
+    +imageless-button-highlight-shadow(rgba(255,255,255,.05),rgba(0,0,0,.25))
+
+
+    &.success
+        :background-color = !green
+
+    &.error
+        :background-color = !red
+
+    &.notice
+        :background-color = !orange
+
